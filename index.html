@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Dev Card Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>GitHub Dev Card</h1>
+        <p>Generate and download your profile card</p>
+
+        <!-- INPUT SECTION -->
+        <div class="box" id="input-section">
+            <div class="input-row">
+                <input type="text" id="username" placeholder="Username (e.g. google)" />
+                <button id="generate-btn" type="button" onclick="generate()">Generate</button>
+            </div>
+            
+            <div id="status">
+                <div id="step-1" class="log-item">○ Fetching GitHub...</div>
+                <div id="step-2" class="log-item">○ Analyzing with AI...</div>
+                <div id="step-3" class="log-item">○ Creating Card...</div>
+            </div>
+
+            <div style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <span style="font-size: 14px; color: #8b949e;">Theme:</span>
+                <select id="theme">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="error-display"></div>
+
+        <!-- RESULT SECTION -->
+        <div id="result-container">
+            <div class="big-success-msg">✅ CARD GENERATED!</div>
+            
+            <div id="card-mount"></div>
+
+            <div class="btn-group">
+                <button class="btn-blue" type="button" id="download-btn">Download Image</button>
+                <button class="btn-gray" type="button" onclick="copyLink()">Copy URL</button>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 11px;">
+                Link: <span id="url-val" style="color:#58a6ff;"></span>
+            </p>
+            
+            <div style="margin-top: 20px;">
+                <a id="link-direct" class="view-btn" href="#" target="_blank">OPEN IN NEW TAB</a>
+                <button class="btn-gray" type="button" onclick="location.reload()" style="margin-left:10px; padding: 5px 10px; font-size:12px;">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
