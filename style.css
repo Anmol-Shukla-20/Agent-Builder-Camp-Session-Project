@@ -1,0 +1,87 @@
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #f0f6fc;
+    --accent: #238636;
+    --border: #30363d;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.main-container {
+    max-width: 500px;
+    width: 100%;
+}
+
+.box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 { margin: 0 0 10px 0; text-align: center; }
+p { text-align: center; color: #8b949e; margin-top: 0; }
+
+.input-row { display: flex; gap: 10px; margin-top: 15px; }
+input { flex: 1; background: #0d1117; border: 1px solid var(--border); color: white; padding: 10px; border-radius: 6px; }
+button { background: var(--accent); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+button:disabled { opacity: 0.5; }
+
+/* STATUS */
+#status { margin: 15px 0; font-size: 14px; display: none; background: #1c2128; border-radius: 6px; padding: 10px; }
+.log-item { margin-bottom: 4px; }
+.log-item.done { color: #2ea043; }
+.log-item.active { color: #58a6ff; font-weight: bold; }
+
+/* RESULTS */
+#result-container {
+    display: none;
+    border: 2px solid #2ea043;
+    padding: 20px;
+    border-radius: 12px;
+    background: #0d1117;
+    text-align: center;
+}
+
+#card-mount {
+    margin: 20px 0;
+    display: inline-block;
+    background: white;
+    padding: 5px;
+    border-radius: 16px;
+}
+
+.big-success-msg {
+    color: #2ea043;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.btn-group { display: flex; gap: 10px; justify-content: center; }
+.btn-blue { background: #0969da; }
+.btn-gray { background: #30363d; border: 1px solid var(--border); }
+
+#error-display { color: #f85149; margin-top: 15px; text-align: center; display: none; }
+
+.view-btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: 700;
+}
