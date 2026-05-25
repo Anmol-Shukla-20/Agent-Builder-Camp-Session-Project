@@ -59,5 +59,11 @@ gcloud run deploy github-card-backend --source ./backend --region us-central1 --
 gcloud run deploy github-card-frontend --source ./frontend --region us-central1 --allow-unauthenticated --set-env-vars BACKEND_URL=YOUR_BACKEND_URL
 ```
 
+### UI Appearance:
+![GitHub Dev Card Generator UI](images/image_1.png)
+
+### Generated Card
+![Generated GitHub Dev Card](images/image_2.png)
+
 ## 🛡️ License
 MIT
