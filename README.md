@@ -66,3 +66,7 @@ gcloud run deploy github-card-frontend --source ./frontend --region us-central1 
 ![Generated GitHub Dev Card](images/image_2.png)
 
 
+## Project Owner:
+This Project is developed and created by **Anmol Shukla**. If you have any ideas or you want to collaborate on this project Feel free ot reach out.
+
+
