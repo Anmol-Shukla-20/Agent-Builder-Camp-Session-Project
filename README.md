@@ -65,5 +65,4 @@ gcloud run deploy github-card-frontend --source ./frontend --region us-central1 
 ### Generated Card
 ![Generated GitHub Dev Card](images/image_2.png)
 
-## 🛡️ License
-MIT
+
